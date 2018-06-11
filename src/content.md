@@ -19,7 +19,7 @@ I make web sites, web-based tools, and web-based games. I'm passionate about cre
 
 ***
 
-### Web work done through Corporate 3 Design
+### <a name="web">Web work done through Corporate 3 Design</a>
 
 I currently work as a full-stack web developer at C3D, working with designers to bring clients' visions to life, with an emphasis on responsive design.
 
@@ -29,7 +29,7 @@ I currently work as a full-stack web developer at C3D, working with designers to
 
 ***
 
-### Games and Game-Making-Tools
+### <a name="games">Games and Game-Making-Tools</a>
 
 I love games. I love to play them, but I also think games are important. Games can be a powerful lens for user or audience interation, and think games are vital tool for education, particularly tech education. But also games are fun. I value fun.
 

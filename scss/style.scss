@@ -6,12 +6,12 @@ body{
 	margin: 0;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Quicksand:400,700');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300|Quicksand:400,700');
 
 $tablet-breakpoint: 35em;
 $desktop-breakpoint: 55em;
 
-body.one{
+body.sweet{
 
 	$bg-yellow: #ffeb00;
 	$accent-orange: #ff7908;
@@ -36,6 +36,16 @@ body.one{
 		box-shadow: -0.33em 0.33em 0 $shadow;
 	}
 
+	%candy-links{
+		text-decoration: none;
+		padding: 0 0.1em;
+		color: black;
+	    background-color: $accent-teal;
+	    &:hover,&:focus,&:active{
+	    	background-color: yellow;
+	    }
+	}
+
 	header{
 		overflow: auto;
 		padding: 2em 0;
@@ -50,9 +60,51 @@ body.one{
 		h2{
 			font-size: 1.25em;
 
-			span{
+			a{
+				text-decoration: none;
+				color: white;
 				display: block;
+
+				&:hover{
+					color: black;
+				}
 			}
+		}
+	}
+
+	label#theme-menu {
+	    display: flex;
+	    margin: 0.5em auto;
+	    width: max-content;
+	    text-align: center;
+
+	    ul {
+		    display: flex;
+		    padding: 0;
+		    margin: 0;
+		    list-style: none;
+		}
+
+		li {
+		    margin: 0 0.5em;
+		    padding: 0;
+
+		    &#sweet{
+
+		    	a{
+		    		background-color: yellow;
+		    	}
+
+		    	&::before,&::after{
+		    		content: "\1F36B";
+		    		line-height: 1;
+		    		margin-left: 0.25em;
+		    	}
+		    }
+		}
+
+		a{
+			@extend %candy-links;
 		}
 	}
 
@@ -110,15 +162,8 @@ body.one{
 			}
 		}
 
-		a{
-			text-decoration: none;
-			padding: 0 0.1em;
-			color: black;
-		    background-color: $accent-teal;
-
-		    &:hover,&:focus,&:active{
-		    	background-color: yellow;
-		    }
+		a[href]{
+			@extend %candy-links
 
 		}
 
@@ -141,7 +186,7 @@ body.one{
 			}
 
 			h2{
-				span{
+				a{
 					display: inline-block;
 
 					&:first-of-type::after{
@@ -154,6 +199,22 @@ body.one{
 	}
 
 	@media (min-width: $desktop-breakpoint) {
+
+		label#theme-menu {
+			position: absolute;
+    		right: calc(50vw + 19em);
+    		flex-direction: column;
+    		margin-top: 1em;
+
+			ul{
+				flex-direction: column;
+			}
+
+			li{
+				margin: 0.25em;
+			}
+		}
+
 		.content{
 			position: relative;
 
@@ -166,82 +227,163 @@ body.one{
 	}
 }
 
-body.two{
+body.vapor{
 
 	$bg-blue: #9be7fb;
+	$blue-gel: fade-out(#0000ff,0.8);
+	$purple-shadow: fade-out(#520090,0.5);
 
 	background-color: $bg-blue;
 	background-image: url('../media/images/clouds.gif');
 	background-repeat: no-repeat no-repeat;
 	background-position: top center;
 	background-size: 100%;
+	background-attachment: fixed;
 	font-family: sans-serif;
 	font-weight: 300;
 	line-height: 1.5;
 
 	%ghost-box{
-		background-color: fade-out(white,0.66);
+		background-color: fade-out($bg-blue,0.5);
+	}
+
+	%triple-circle{
+		position: relative;
+		border-radius: 50%;
+		overflow: visible;
+
+		&::before,&::after{
+		   	position: absolute;
+    		content: "";
+    		display: block;
+    		width: 100%;
+    		height: 100%;
+    		top: -1px;
+    		border: 1px solid white;
+    		border-radius: 50%;
+    		z-index: 2;
+		}
+		&::before{
+			left: -0.75em;
+		}
+		&::after{
+			left: 0.75em;
+		}
+	}
+
+	%glow-hover{
+		&:hover {
+    		background-image: radial-gradient(ellipse at center, #ffffff 0%,#80ffff 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
 	}
 
 	h1,h2,h3,h4,h5,h6{
 		font-family: 'Cormorant Garamond', serif;
+		font-weight: 300;
 		text-transform: uppercase;
 	}
 
 	.container{
+		position: relative;
 		max-width: $tablet-breakpoint;
-		margin: 0 auto;
-		padding: 1em 0.5em;
+		margin: 0 auto -20em auto;
+		padding: 1em;
+    	background: $blue-gel;
+    	box-shadow: 0 30px 100px $purple-shadow;
 	}
 
 	header{
 		@extend %ghost-box;
+		padding: 1.5em 0;
 
 		h1,h2{
 			margin: 0;
+			line-height: 1.1;
 			text-align: center;
+		}
+
+		h2{
+			font-size: 1em;
+
+			a{
+				display:block;
+				text-decoration: none;
+				color: black;
+
+				@extend %glow-hover;
+
+				&::before,&::after{
+					content: "\25cb";
+					color: white;
+					margin: 0 0.25em;
+				}
+
+			}
+		}
+	}
+
+	label#theme-menu {
+
+		display: block;
+		margin: 0.5em;
+		text-align: center;
+		color: white;
+		text-transform: uppercase;
+		font-family: 'Cormorant Garamond', serif;
+		font-weight: 300;
+
+		span{
+			font-size: 0.8em;
+		}
+
+		ul{
+			display: flex;
+			margin: 0;
+			padding: 0;
+			justify-content: center;
+			list-style: none;
+		}
+
+		li{
+			padding: 0 0.25em;
+			line-height: 1em;
+
+			&#vapor a{
+				background-color: blue;
+			}
+		}
+
+		a{
+			padding: 0 0.25em;
+			color: white;
+			text-decoration: none;
+
+			&:hover{
+				background-color: blue;
+			}
 		}
 	}
 
 	.content{
 
 		figure {
-			position: relative;
-		    margin: 1em auto;
-		    width: 15em;
-		    height: 15em;
-		    border-radius: 50%;
+			margin: 2em auto;
+			width: 15em;
+			height: 15em;
+		   
+			@extend %triple-circle;
 
 		    img{
 		    	width: 100%;
     			margin-top: -2.5em;
     			filter: grayscale(100%);
     			clip-path: circle(42%);
-
 		    }
 
 		    figcaption{
 		    	display: none;
-		    }
-
-		    &::before,&::after{
-		    	position: absolute;
-    			content: "";
-    			display: block;
-    			width: 100%;
-    			height: 100%;
-    			top: 0;
-    			border: 1px solid white;
-    			border-radius: 50%;
-    			z-index: 2;
-		    }
-
-		    &::before{
-		    	left: -0.75em;
-		    }
-
-		    &::after{
-		    	left: 0.75em;
 		    }
 		}
 
@@ -263,6 +405,69 @@ body.two{
 			margin: 0;
 			padding-top: 0.25em;
 			padding-bottom: 1em;
+			list-style-image: url('../media/images/gemblue.gif');
+		}
+
+		a[href]{
+			text-decoration: none;
+
+			@extend %glow-hover;
+		}
+
+		hr{
+			height: 2em;
+			width: 2em;
+			margin: 1em auto;
+			border: 1px solid white;
+			@extend %triple-circle;
+
+			&:last-of-type{
+				position: absolute;
+    			bottom: -230px;
+    			left: 50%;
+    			transform: translateX(-50%);
+    			width: 400px;
+    			height: 61vw;
+    			max-width: 100%;
+    			max-height: 245px;
+    			border-radius: 0%;
+    			border: none;
+    			background-image: url(../media/images/dolphin.gif);
+    			background-size: 100%;
+    			background-repeat: no-repeat;
+
+				&::after,&::before{
+					display: none;
+				}
+			}
+		}
+	}
+
+	@media (min-width: $tablet-breakpoint) {
+
+		header{
+			h1{
+				font-size: 3em;
+			}
+
+			h2{
+				font-size: 1.2em;
+
+				a{
+					display: inline-block;
+
+					&::before,&::after{
+						display: none;
+					}
+
+					&:first-of-type::after{
+						display: inline;
+						margin: 0.25em;
+    					color: white !important;
+    					-webkit-text-fill-color: white;
+					}
+				}
+			}
 		}
 	}
 

@@ -7,17 +7,23 @@
 	<meta name="date" content="June 10, 2018"/>
 	<link type="text/css" rel="stylesheet" href="css/style.css"/>
 </head>
-<body class="two">
+<body class="vapor">
 	<div class="container">
 		<header>
 			<h1>Andrew Yolland</h1>
-			<h2><span>Full-Stack Web Developer</span><span>Game Designer</span></h2>
+			<h2><a href="#web">Full-Stack Web Developer</a><a href="#games">Game Designer</a></h2>
 		</header>
+		<label id="theme-menu"><span>Select Theme:</span>
+			<ul>
+				<li id="sweet"><a href="?theme=sweet">Sweet</a></li>
+				<li id="vapor"><a href="?theme=vapor">Vapor</a></li>
+			</ul>
+		</label>
 		<section class="content">
 			<!-- @include "content.html" -->
 		</section>
 	</div>
-	<script type="javascript" src="js/scripts.js"></script>
+	<script src="js/scripts.js"></script>
 </body>
 </html>
 

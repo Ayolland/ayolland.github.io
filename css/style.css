@@ -1,150 +1,271 @@
-@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond|Quicksand:400,700");
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:300|Quicksand:400,700");
 body {
   margin: 0; }
 
-body.one {
+body.sweet {
   font-family: 'Quicksand', sans-serif;
   background-image: url("../media/images/pattern.png"), linear-gradient(to bottom, #ffeb00 0%, #ffffcd 100%); }
-  body.one .content {
+  body.sweet .content {
     max-width: 35em;
     margin: 0 auto;
     padding: 0 0.5em; }
-  body.one .content figure, body.one .content p {
+  body.sweet .content figure, body.sweet .content p {
     border: 1px solid rgba(255, 121, 8, 0.5);
     box-shadow: -0.33em 0.33em 0 rgba(255, 121, 8, 0.5); }
-  body.one header {
+  body.sweet label#theme-menu a, body.sweet .content a[href] {
+    text-decoration: none;
+    padding: 0 0.1em;
+    color: black;
+    background-color: #b4ffe4; }
+    body.sweet label#theme-menu a:hover, body.sweet .content a:hover[href], body.sweet label#theme-menu a:focus, body.sweet .content a:focus[href], body.sweet label#theme-menu a:active, body.sweet .content a:active[href] {
+      background-color: yellow; }
+  body.sweet header {
     overflow: auto;
     padding: 2em 0;
     text-align: center;
     background-color: rgba(255, 121, 8, 0.5);
     color: white; }
-    body.one header h1, body.one header h2 {
+    body.sweet header h1, body.sweet header h2 {
       margin: 0; }
-    body.one header h2 {
+    body.sweet header h2 {
       font-size: 1.25em; }
-      body.one header h2 span {
+      body.sweet header h2 a {
+        text-decoration: none;
+        color: white;
         display: block; }
-  body.one .content figure {
+        body.sweet header h2 a:hover {
+          color: black; }
+  body.sweet label#theme-menu {
+    display: flex;
+    margin: 0.5em auto;
+    width: max-content;
+    text-align: center; }
+    body.sweet label#theme-menu ul {
+      display: flex;
+      padding: 0;
+      margin: 0;
+      list-style: none; }
+    body.sweet label#theme-menu li {
+      margin: 0 0.5em;
+      padding: 0; }
+      body.sweet label#theme-menu li#sweet a {
+        background-color: yellow; }
+      body.sweet label#theme-menu li#sweet::before, body.sweet label#theme-menu li#sweet::after {
+        content: "\1F36B";
+        line-height: 1;
+        margin-left: 0.25em; }
+  body.sweet .content figure {
     max-width: max-content;
     margin: 1em auto;
     background-color: #ff7908;
     background-image: url("../media/images/selfie.jpg");
     background-size: cover;
     background-blend-mode: overlay; }
-    body.one .content figure img {
+    body.sweet .content figure img {
       display: block;
       opacity: 0.5;
       max-width: 15em; }
-    body.one .content figure figcaption {
+    body.sweet .content figure figcaption {
       display: none; }
-  body.one .content h3 {
+  body.sweet .content h3 {
     display: inline-block;
     padding: 0 0.5em;
     margin: 0.5em 0;
     background-color: rgba(255, 121, 8, 0.5);
     border: 1px solid rgba(255, 121, 8, 0.5);
     box-shadow: -0.25em 0.25em white; }
-  body.one .content p {
+  body.sweet .content p {
     background: white;
     padding: 0.5em;
     color: black; }
-  body.one .content li {
+  body.sweet .content li {
     list-style: none;
     padding: 0 0 0 0.5em;
     line-height: 1;
     margin-bottom: 0.25em; }
-    body.one .content li:before {
+    body.sweet .content li:before {
       display: inline-block;
       content: "\1F36C";
       font-size: 1.5em;
       vertical-align: middle;
       margin: 0 0.25em 0 -1.75em; }
-  body.one .content a {
-    text-decoration: none;
-    padding: 0 0.1em;
-    color: black;
-    background-color: #b4ffe4; }
-    body.one .content a:hover, body.one .content a:focus, body.one .content a:active {
-      background-color: yellow; }
-  body.one .content hr {
+  body.sweet .content hr {
     border: none;
     text-align: center;
     font-size: 2em;
     line-height: 1em; }
-    body.one .content hr::after {
+    body.sweet .content hr::after {
       content: "\1F369"; }
   @media (min-width: 35em) {
-    body.one header h1 {
+    body.sweet header h1 {
       font-size: 3em; }
-    body.one header h2 span {
+    body.sweet header h2 a {
       display: inline-block; }
-      body.one header h2 span:first-of-type::after {
+      body.sweet header h2 a:first-of-type::after {
         content: "\1F366";
         padding: 0 0.25em; } }
   @media (min-width: 55em) {
-    body.one .content {
+    body.sweet label#theme-menu {
+      position: absolute;
+      right: calc(50vw + 19em);
+      flex-direction: column;
+      margin-top: 1em; }
+      body.sweet label#theme-menu ul {
+        flex-direction: column; }
+      body.sweet label#theme-menu li {
+        margin: 0.25em; }
+    body.sweet .content {
       position: relative; }
-      body.one .content figure {
+      body.sweet .content figure {
         position: absolute;
         left: 90%;
         z-index: -1; } }
 
-body.two {
+body.vapor {
   background-color: #9be7fb;
   background-image: url("../media/images/clouds.gif");
   background-repeat: no-repeat no-repeat;
   background-position: top center;
   background-size: 100%;
+  background-attachment: fixed;
   font-family: sans-serif;
   font-weight: 300;
   line-height: 1.5; }
-  body.two header, body.two .content h3, body.two .content p, body.two .content ul {
-    background-color: rgba(255, 255, 255, 0.34); }
-  body.two h1, body.two h2, body.two h3, body.two h4, body.two h5, body.two h6 {
-    font-family: 'Cormorant Garamond', serif;
-    text-transform: uppercase; }
-  body.two .container {
-    max-width: 35em;
-    margin: 0 auto;
-    padding: 1em 0.5em; }
-  body.two header h1, body.two header h2 {
-    margin: 0;
-    text-align: center; }
-  body.two .content figure {
+  body.vapor header, body.vapor .content h3, body.vapor .content p, body.vapor .content ul {
+    background-color: rgba(155, 231, 251, 0.5); }
+  body.vapor .content figure, body.vapor .content hr {
     position: relative;
-    margin: 1em auto;
-    width: 15em;
-    height: 15em;
-    border-radius: 50%; }
-    body.two .content figure img {
-      width: 100%;
-      margin-top: -2.5em;
-      filter: grayscale(100%);
-      clip-path: circle(42%); }
-    body.two .content figure figcaption {
-      display: none; }
-    body.two .content figure::before, body.two .content figure::after {
+    border-radius: 50%;
+    overflow: visible; }
+    body.vapor .content figure::before, body.vapor .content hr::before, body.vapor .content figure::after, body.vapor .content hr::after {
       position: absolute;
       content: "";
       display: block;
       width: 100%;
       height: 100%;
-      top: 0;
+      top: -1px;
       border: 1px solid white;
       border-radius: 50%;
       z-index: 2; }
-    body.two .content figure::before {
+    body.vapor .content figure::before, body.vapor .content hr::before {
       left: -0.75em; }
-    body.two .content figure::after {
+    body.vapor .content figure::after, body.vapor .content hr::after {
       left: 0.75em; }
-  body.two .content h3 {
+  body.vapor header h2 a:hover, body.vapor .content a:hover[href] {
+    background-image: radial-gradient(ellipse at center, #ffffff 0%, #80ffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  body.vapor h1, body.vapor h2, body.vapor h3, body.vapor h4, body.vapor h5, body.vapor h6 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    text-transform: uppercase; }
+  body.vapor .container {
+    position: relative;
+    max-width: 35em;
+    margin: 0 auto -20em auto;
+    padding: 1em;
+    background: rgba(0, 0, 255, 0.2);
+    box-shadow: 0 30px 100px rgba(82, 0, 144, 0.5); }
+  body.vapor header {
+    padding: 1.5em 0; }
+    body.vapor header h1, body.vapor header h2 {
+      margin: 0;
+      line-height: 1.1;
+      text-align: center; }
+    body.vapor header h2 {
+      font-size: 1em; }
+      body.vapor header h2 a {
+        display: block;
+        text-decoration: none;
+        color: black; }
+        body.vapor header h2 a::before, body.vapor header h2 a::after {
+          content: "\25cb";
+          color: white;
+          margin: 0 0.25em; }
+  body.vapor label#theme-menu {
+    display: block;
+    margin: 0.5em;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300; }
+    body.vapor label#theme-menu span {
+      font-size: 0.8em; }
+    body.vapor label#theme-menu ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      list-style: none; }
+    body.vapor label#theme-menu li {
+      padding: 0 0.25em;
+      line-height: 1em; }
+      body.vapor label#theme-menu li#vapor a {
+        background-color: blue; }
+    body.vapor label#theme-menu a {
+      padding: 0 0.25em;
+      color: white;
+      text-decoration: none; }
+      body.vapor label#theme-menu a:hover {
+        background-color: blue; }
+  body.vapor .content figure {
+    margin: 2em auto;
+    width: 15em;
+    height: 15em; }
+    body.vapor .content figure img {
+      width: 100%;
+      margin-top: -2.5em;
+      filter: grayscale(100%);
+      clip-path: circle(42%); }
+    body.vapor .content figure figcaption {
+      display: none; }
+  body.vapor .content h3 {
     margin: 0;
     text-align: center;
     padding: 0.5em; }
-  body.two .content p {
+  body.vapor .content p {
     margin: 0;
     padding: 0.66em 1em; }
-  body.two .content ul {
+  body.vapor .content ul {
     margin: 0;
     padding-top: 0.25em;
-    padding-bottom: 1em; }
+    padding-bottom: 1em;
+    list-style-image: url("../media/images/gemblue.gif"); }
+  body.vapor .content a[href] {
+    text-decoration: none; }
+  body.vapor .content hr {
+    height: 2em;
+    width: 2em;
+    margin: 1em auto;
+    border: 1px solid white; }
+    body.vapor .content hr:last-of-type {
+      position: absolute;
+      bottom: -230px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 400px;
+      height: 61vw;
+      max-width: 100%;
+      max-height: 245px;
+      border-radius: 0%;
+      border: none;
+      background-image: url(../media/images/dolphin.gif);
+      background-size: 100%;
+      background-repeat: no-repeat; }
+      body.vapor .content hr:last-of-type::after, body.vapor .content hr:last-of-type::before {
+        display: none; }
+  @media (min-width: 35em) {
+    body.vapor header h1 {
+      font-size: 3em; }
+    body.vapor header h2 {
+      font-size: 1.2em; }
+      body.vapor header h2 a {
+        display: inline-block; }
+        body.vapor header h2 a::before, body.vapor header h2 a::after {
+          display: none; }
+        body.vapor header h2 a:first-of-type::after {
+          display: inline;
+          margin: 0.25em;
+          color: white !important;
+          -webkit-text-fill-color: white; } }
