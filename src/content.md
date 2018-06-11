@@ -1,3 +1,6 @@
+![An image of my smiling face](media/images/selfie.jpg "Selfie")
+
+
 I'm a web developer and game designer based out of Omaha, Nebraska.
 
 I graduated from _Omaha Code School_ in 2015 and work as a developer at _[Corporate 3 Design](https://www.corporate3design.com/)_.

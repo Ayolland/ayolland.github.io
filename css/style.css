@@ -1,10 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond|Quicksand:400,700");
 body {
   margin: 0; }
 
 body.one {
   font-family: 'Quicksand', sans-serif;
   background-image: url("../media/images/pattern.png"), linear-gradient(to bottom, #ffeb00 0%, #ffffcd 100%); }
+  body.one .content {
+    max-width: 35em;
+    margin: 0 auto;
+    padding: 0 0.5em; }
+  body.one .content figure, body.one .content p {
+    border: 1px solid rgba(255, 121, 8, 0.5);
+    box-shadow: -0.33em 0.33em 0 rgba(255, 121, 8, 0.5); }
   body.one header {
     overflow: auto;
     padding: 2em 0;
@@ -17,10 +24,19 @@ body.one {
       font-size: 1.25em; }
       body.one header h2 span {
         display: block; }
-  body.one .content {
-    max-width: 35em;
-    margin: 0 auto;
-    padding: 0 0.5em; }
+  body.one .content figure {
+    max-width: max-content;
+    margin: 1em auto;
+    background-color: #ff7908;
+    background-image: url("../media/images/selfie.jpg");
+    background-size: cover;
+    background-blend-mode: overlay; }
+    body.one .content figure img {
+      display: block;
+      opacity: 0.5;
+      max-width: 15em; }
+    body.one .content figure figcaption {
+      display: none; }
   body.one .content h3 {
     display: inline-block;
     padding: 0 0.5em;
@@ -31,8 +47,6 @@ body.one {
   body.one .content p {
     background: white;
     padding: 0.5em;
-    border: 1px solid rgba(255, 121, 8, 0.5);
-    box-shadow: -0.33em 0.33em 0 rgba(255, 121, 8, 0.5);
     color: black; }
   body.one .content li {
     list-style: none;
@@ -67,3 +81,70 @@ body.one {
       body.one header h2 span:first-of-type::after {
         content: "\1F366";
         padding: 0 0.25em; } }
+  @media (min-width: 55em) {
+    body.one .content {
+      position: relative; }
+      body.one .content figure {
+        position: absolute;
+        left: 90%;
+        z-index: -1; } }
+
+body.two {
+  background-color: #9be7fb;
+  background-image: url("../media/images/clouds.gif");
+  background-repeat: no-repeat no-repeat;
+  background-position: top center;
+  background-size: 100%;
+  font-family: sans-serif;
+  font-weight: 300;
+  line-height: 1.5; }
+  body.two header, body.two .content h3, body.two .content p, body.two .content ul {
+    background-color: rgba(255, 255, 255, 0.34); }
+  body.two h1, body.two h2, body.two h3, body.two h4, body.two h5, body.two h6 {
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase; }
+  body.two .container {
+    max-width: 35em;
+    margin: 0 auto;
+    padding: 1em 0.5em; }
+  body.two header h1, body.two header h2 {
+    margin: 0;
+    text-align: center; }
+  body.two .content figure {
+    position: relative;
+    margin: 1em auto;
+    width: 15em;
+    height: 15em;
+    border-radius: 50%; }
+    body.two .content figure img {
+      width: 100%;
+      margin-top: -2.5em;
+      filter: grayscale(100%);
+      clip-path: circle(42%); }
+    body.two .content figure figcaption {
+      display: none; }
+    body.two .content figure::before, body.two .content figure::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      border: 1px solid white;
+      border-radius: 50%;
+      z-index: 2; }
+    body.two .content figure::before {
+      left: -0.75em; }
+    body.two .content figure::after {
+      left: 0.75em; }
+  body.two .content h3 {
+    margin: 0;
+    text-align: center;
+    padding: 0.5em; }
+  body.two .content p {
+    margin: 0;
+    padding: 0.66em 1em; }
+  body.two .content ul {
+    margin: 0;
+    padding-top: 0.25em;
+    padding-bottom: 1em; }
