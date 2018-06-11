@@ -8,6 +8,9 @@ body{
 
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300|Quicksand:400,700');
 
+$font1: 'Quicksand', 'sans-serif';
+$font2: 'Cormorant Garamond', 'serif';
+
 $tablet-breakpoint: 35em;
 $desktop-breakpoint: 55em;
 
@@ -18,7 +21,7 @@ body.sweet{
 	$shadow: fade-out($accent-orange,0.5);
 	$accent-teal: #b4ffe4;
 
-	font-family: 'Quicksand', sans-serif;
+	font-family: $font1;
 	//background-color: $bg-yellow;
 	background-image:
 		url('../media/images/pattern.png'),
@@ -280,7 +283,7 @@ body.vapor{
 	}
 
 	h1,h2,h3,h4,h5,h6{
-		font-family: 'Cormorant Garamond', serif;
+		font-family: $font2;
 		font-weight: 300;
 		text-transform: uppercase;
 	}
@@ -331,7 +334,7 @@ body.vapor{
 		text-align: center;
 		color: white;
 		text-transform: uppercase;
-		font-family: 'Cormorant Garamond', serif;
+		font-family: $font2;
 		font-weight: 300;
 
 		span{
@@ -576,6 +579,11 @@ body.spartan{
 			display: none;
 		}
 
+		p{
+			letter-spacing: 0.5px;
+			line-height: 1.25;
+		}
+
 		a[href]{
 			@extend %animated-link;
 		}
@@ -584,10 +592,15 @@ body.spartan{
 			list-style: none;
 			padding-left: 1em;
 
-			li:before {
-				content: "-";
-				display: inline-block;
-				margin-right: 0.5em;
+			li{
+				margin: 0.25em 0;
+
+				&:before {
+					content: "-";
+					display: inline-block;
+					margin: 0 0.5em;
+					color: $plum;
+				}
 			}
 		}
 
@@ -658,6 +671,70 @@ body.spartan{
     				display: none;
     			}
     		}
+		}
+	}
+}
+
+body.space-case{
+
+	font-family: $font1;
+
+	@mixin spacetrail($length,$color1: yellow, $color2: red, $text: false){
+		$tempString: "-1px 1px #{$color1}";
+		@for $i from 2 through $length {
+			$ratio: 100% - ($i / $length * 100%);
+			$tempcolor: mix($color1,$color2, $ratio );
+			$tempString: $tempString + ", -#{$i}px #{$i}px #{$tempcolor}";
+		}
+		@if ($text){
+			text-shadow: unquote($tempString);
+		} @else {
+			box-shadow: unquote($tempString);
+		}
+	}
+
+	%space-text{
+		
+	}
+
+	%space-box{
+		padding: 0.5em;
+		background-color: white;
+		border: 2px solid orange;
+		border-radius: 0.25em;
+	}
+
+	.container{
+		max-width: $tablet-breakpoint;
+		margin: 0 auto;
+		padding: 1em;
+		overflow: visible;
+	}
+
+	h1,h2,h3{
+		@include spacetrail(20, white, blue, true);
+	}
+
+	figure{
+		display: none;
+	}
+
+	.content{
+		p{
+			@extend %space-box;
+			@include spacetrail(500, yellow, red, false);
+
+			&+p{
+				@include spacetrail(400, mix(yellow,red,85%), mix(red,purple,80%), false);
+
+				&+p{
+					@include spacetrail(500, mix(yellow,red,70%), mix(red,purple,60%), false);
+
+					&+p{
+						@include spacetrail(500, mix(yellow,red,65%), mix(red,purple,40%), false);
+					}
+				}
+			}
 		}
 	}
 }

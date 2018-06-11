@@ -12,7 +12,7 @@ function setTheme(themeName){
 }
 
 function processThemeRequest(){
-	var themes = ["vapor","sweet","spartan"];
+	var themes = ["vapor","sweet","spartan","space-case"];
 	var currentTheme = getRequestVar('theme');
 	var validTheme = ( typeof(currentTheme) !== "undefined" ) && themes.includes(currentTheme);
 	if( validTheme ){
