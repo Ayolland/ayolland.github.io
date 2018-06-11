@@ -472,3 +472,192 @@ body.vapor{
 	}
 
 }
+
+body.spartan{
+	font-family: 'Helvetica', sans-serif;
+
+	$plum: #9c18be;
+
+	%animated-link{
+		display: inline-block;
+		text-decoration: none;
+		color: red;
+		text-shadow: -0.5px 1px white, 0.5px 1px white;
+		transition: color 0.5s;
+		vertical-align: middle;
+
+		&:after{
+			content: "";
+    		display: block;
+    		width: 0%;
+    		height: 1px;
+    		background-color: red;
+    		margin-top: -2px;
+    		transition: width 0.5s, background-color 0.5s;
+		}
+
+		&:hover,&:focus{
+			color: $plum;
+
+			&:after{
+				background-color: $plum;
+
+				@media (min-width: $tablet-breakpoint) {
+					width: 100%;
+				}
+			}
+		}
+
+		&:visted{
+			color: $plum;
+		}
+
+	}
+
+	.container{
+		max-width: $tablet-breakpoint;
+		margin: 0 auto;
+		padding: 1em 1em 4em 1em;
+		overflow: auto;
+	}
+
+	header{
+
+		h1{
+			font-size: 3.5em;
+    		width: 1px;
+    		margin: 0;
+		}
+
+		h2{
+			font-size: 1.5em;
+
+			a{
+				display: block;
+				width: max-content;
+				max-width: 100%;
+
+				@extend %animated-link;
+			}
+		}
+	}
+
+	label#theme-menu {
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		font-style: italic;
+
+		ul{
+			display: flex;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		li{
+			margin-right: 1em;
+
+			&#spartan{
+				a{
+					color: $plum;
+				}
+			}
+		}
+
+		a{
+			font-weight: 700;
+			@extend %animated-link;
+		}
+	}
+
+	.content{
+		figure{
+			display: none;
+		}
+
+		a[href]{
+			@extend %animated-link;
+		}
+
+		ul{
+			list-style: none;
+			padding-left: 1em;
+
+			li:before {
+				content: "-";
+				display: inline-block;
+				margin-right: 0.5em;
+			}
+		}
+
+		hr{
+			width: 10%;
+			margin: 0;
+			height: 1px;
+			background-color: red;
+			border: none;
+			transition: width 7s;
+
+			&:last-of-type{
+				display: none;
+			}
+		}
+
+		p:hover,ul:hover{
+			&+hr{
+				width: 100%;
+				background-color: $plum;
+			}
+		}
+	}
+
+	@media (min-width: $tablet-breakpoint) {
+
+		.container{
+			position: relative;
+		}
+
+		label#theme-menu {
+			flex-direction: row;
+
+			ul{
+				margin-left: 1em;
+			}
+
+			li{
+				&#spartan{
+					a{
+						&::after{
+							width: 100%;
+							background-color: $plum;
+						}
+					}
+				}
+			}
+		}
+
+		.content{
+
+			figure {
+    			display: block;
+    			position: absolute;
+    			top: 1em;
+    			right: 1em;
+    			max-width: 10em;
+    			margin: 0;
+    			background: $plum;
+
+    			img{
+    				display: block;
+    				width: 100%;
+					filter: grayscale(100%);
+					opacity: .5;
+    			}
+    			figcaption{
+    				display: none;
+    			}
+    		}
+		}
+	}
+}

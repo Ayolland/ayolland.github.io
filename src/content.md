@@ -23,9 +23,10 @@ I make web sites, web-based tools, and web-based games. I'm passionate about cre
 
 I currently work as a full-stack web developer at C3D, working with designers to bring clients' visions to life, with an emphasis on responsive design.
 
-* [Methodist Hospital 2016 Meaning of Care Brand Site]()
-* [Omaha Eppley Airfield Website]()
-* [5C Laboratories site]()
+* [Methodist Hospital 2016 Meaning of Care Brand Site](http://bestcare.org/tmoc2016/)
+* [Omaha Eppley Airfield Website](https://www.flyoma.com)
+* [5C Laboratories site](http://5clabs.com/)
+* [Methodist Hospital 2018 Meaning of Care Brand Site](https://www.bestcare.org/content/tmoc-spring-2018/)
 
 ***
 
@@ -35,7 +36,7 @@ I love games. I love to play them, but I also think games are important. Games c
 
 Currently, I work mostly in [Bitsy](https://ledoux.itch.io/bitsy), a JavaScript-based platform for small minimalistic narrative games. You can find my Bitsy games on [my Itch.io profile.](https://ayolland.itch.io/)
 
-[I develop Borksy](https://ayolland.github.io/borksy/), a tool for extending the functionality of Bitsy. The goal of Borksy is to make extending Bitsy as accessible to newcomers as possible, even if users do not have any background in JavaScript, as well as provide easy ,robust tools for experienced creators.
+[I develop Borksy](https://ayolland.github.io/borksy/), a tool for extending the functionality of Bitsy. The goal of Borksy is to make extending Bitsy as accessible to newcomers as possible, even if users do not have any background in JavaScript, as well as provide easy-to-use, robust tools for experienced creators.
 
 I also volunteer with _Mystery Code Society_, a local non-profit working in tech education for middle-school age femmes and non-men. I have helped with curriculum development, development of tools for use in class, as well as a teaching assisant in game dev classes.
 

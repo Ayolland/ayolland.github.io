@@ -269,3 +269,107 @@ body.vapor {
           margin: 0.25em;
           color: white !important;
           -webkit-text-fill-color: white; } }
+
+body.spartan {
+  font-family: 'Helvetica', sans-serif; }
+  body.spartan header h2 a, body.spartan label#theme-menu a, body.spartan .content a[href] {
+    display: inline-block;
+    text-decoration: none;
+    color: red;
+    text-shadow: -0.5px 1px white, 0.5px 1px white;
+    transition: color 0.5s;
+    vertical-align: middle; }
+    body.spartan header h2 a:after, body.spartan label#theme-menu a:after, body.spartan .content a[href]:after {
+      content: "";
+      display: block;
+      width: 0%;
+      height: 1px;
+      background-color: red;
+      margin-top: -2px;
+      transition: width 0.5s, background-color 0.5s; }
+    body.spartan header h2 a:hover, body.spartan label#theme-menu a:hover, body.spartan .content a:hover[href], body.spartan header h2 a:focus, body.spartan label#theme-menu a:focus, body.spartan .content a:focus[href] {
+      color: #9c18be; }
+      body.spartan header h2 a:hover:after, body.spartan label#theme-menu a:hover:after, body.spartan .content a[href]:hover:after, body.spartan header h2 a:focus:after, body.spartan label#theme-menu a:focus:after, body.spartan .content a[href]:focus:after {
+        background-color: #9c18be; }
+        @media (min-width: 35em) {
+          body.spartan header h2 a:hover:after, body.spartan label#theme-menu a:hover:after, body.spartan .content a[href]:hover:after, body.spartan header h2 a:focus:after, body.spartan label#theme-menu a:focus:after, body.spartan .content a[href]:focus:after {
+            width: 100%; } }
+    body.spartan header h2 a:visted, body.spartan label#theme-menu a:visted, body.spartan .content a:visted[href] {
+      color: #9c18be; }
+  body.spartan .container {
+    max-width: 35em;
+    margin: 0 auto;
+    padding: 1em 1em 4em 1em;
+    overflow: auto; }
+  body.spartan header h1 {
+    font-size: 3.5em;
+    width: 1px;
+    margin: 0; }
+  body.spartan header h2 {
+    font-size: 1.5em; }
+    body.spartan header h2 a {
+      display: block;
+      width: max-content;
+      max-width: 100%; }
+  body.spartan label#theme-menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-style: italic; }
+    body.spartan label#theme-menu ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+    body.spartan label#theme-menu li {
+      margin-right: 1em; }
+      body.spartan label#theme-menu li#spartan a {
+        color: #9c18be; }
+    body.spartan label#theme-menu a {
+      font-weight: 700; }
+  body.spartan .content figure {
+    display: none; }
+  body.spartan .content ul {
+    list-style: none;
+    padding-left: 1em; }
+    body.spartan .content ul li:before {
+      content: "-";
+      display: inline-block;
+      margin-right: 0.5em; }
+  body.spartan .content hr {
+    width: 10%;
+    margin: 0;
+    height: 1px;
+    background-color: red;
+    border: none;
+    transition: width 7s; }
+    body.spartan .content hr:last-of-type {
+      display: none; }
+  body.spartan .content p:hover + hr, body.spartan .content ul:hover + hr {
+    width: 100%;
+    background-color: #9c18be; }
+  @media (min-width: 35em) {
+    body.spartan .container {
+      position: relative; }
+    body.spartan label#theme-menu {
+      flex-direction: row; }
+      body.spartan label#theme-menu ul {
+        margin-left: 1em; }
+      body.spartan label#theme-menu li#spartan a::after {
+        width: 100%;
+        background-color: #9c18be; }
+    body.spartan .content figure {
+      display: block;
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      max-width: 10em;
+      margin: 0;
+      background: #9c18be; }
+      body.spartan .content figure img {
+        display: block;
+        width: 100%;
+        filter: grayscale(100%);
+        opacity: .5; }
+      body.spartan .content figure figcaption {
+        display: none; } }
