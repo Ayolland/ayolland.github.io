@@ -8,10 +8,14 @@ body{
 
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
 
+$tablet-breakpoint: 35em;
+$desktop-breakpoint: 50em;
+
 body.one{
 
 	$bg-yellow: #ffeb00;
-	$accent-orange: #ed9900;
+	$accent-orange: #ff7908;
+	$shadow: fade-out($accent-orange,0.5);
 	$accent-teal: #b4ffe4;
 
 	font-family: 'Quicksand', sans-serif;
@@ -23,42 +27,105 @@ body.one{
 
 	header{
 		overflow: auto;
+		padding: 2em 0;
 		text-align: center;
+		background-color: $shadow;
+		color: white;
+
+		h1,h2{
+			margin:0;
+		}
+
+		h2{
+			font-size: 1.25em;
+
+			span{
+				display: block;
+			}
+		}
+	}
+
+	%column{
+		max-width: $tablet-breakpoint;
+   		margin: 0 auto;
+		padding: 0 0.5em;	
 	}
 
 	.content{
-		max-width: 500px;
-		margin: 0 auto;
+		@extend %column;
+
+		h3{
+			display: inline-block;
+			padding: 0 0.5em;
+			margin: 0.5em 0;
+			background-color: $shadow;
+			border: 1px solid $shadow;
+			box-shadow: -0.25em 0.25em white;
+		}
 
 		p {
 		    background: white;
 		    padding: 0.5em;
-		    border: 1px solid #ed9900;
-		    box-shadow: -0.33em 0.33em 0 fade-out($accent-orange,0.5);
+		    border: 1px solid $shadow;
+		    box-shadow: -0.33em 0.33em 0 $shadow;
 		    color: black;
+		}
+
+		li{
+			list-style: none;
+    		padding: 0 0 0 0.5em;
+    		line-height: 1;
+    		margin-bottom: 0.25em;
+
+			&:before {
+				display: inline-block;
+				content: "\1F36C";
+				font-size: 1.5em;
+				vertical-align: middle;
+				margin: 0 0.25em 0 -1.75em;
+			}
 		}
 
 		a{
 			text-decoration: none;
-		    position: relative;
-		    z-index: 2;
+			padding: 0 0.1em;
+			color: black;
+		    background-color: $accent-teal;
 
-		    &::before{
-		    	content: "";
-    			display: inline-block;
-    			position: absolute;
-    			bottom: 0;
-    			left: -0.25em;
-    			width: 100%;
-    			height: 0.75em;
-    			z-index: -1;
-    			background-color: $accent-teal;
-    			color: black;
-		    }
-
-		    &:hover::before{
+		    &:hover,&:focus,&:active{
 		    	background-color: yellow;
 		    }
+
+		}
+
+		hr {
+		    border: none;
+		    text-align: center;
+		    font-size: 2em;
+		    line-height: 1em;
+
+		    &::after{
+		    	content: "\1F369";
+		    }
+		}
+	}
+
+	@media (min-width: $tablet-breakpoint) {
+		header{
+			h1{
+				font-size: 3em;
+			}
+
+			h2{
+				span{
+					display: inline-block;
+
+					&:first-of-type::after{
+						content: "\1F366";
+						padding: 0 0.25em;
+					}
+				}
+			}
 		}
 	}
 }

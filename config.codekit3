@@ -58,6 +58,13 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/media\/pdf\/resume_5-2018.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/media\/pdf\/resume_5-2018.pdf",
+		"oF": 0
+		},
 	"\/README.md": {
 		"cB": 0,
 		"cS": 0,
@@ -101,7 +108,7 @@
 		"cS": 0,
 		"eF": 0,
 		"eL": 1,
-		"ema": 0,
+		"ema": 1,
 		"eSQ": 0,
 		"ft": 4096,
 		"oA": 0,
@@ -110,6 +117,31 @@
 		"oFM": 0,
 		"oS": 1,
 		"pHT": 1,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/src\/footer.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/src\/footer.html",
+		"oF": 0
+		},
+	"\/src\/footer.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/src\/footer.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 1,
+		"pHT": 0,
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
