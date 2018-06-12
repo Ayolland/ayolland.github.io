@@ -703,9 +703,6 @@ body.spartan{
 
 body.space-case{
 
-	background-image: url('../media/images/stars.png');
-	font-family: $font1;
-
 	$sc-yellow: yellow;
 	$sc-red: red;
 	$sc-purple: purple;
@@ -714,6 +711,10 @@ body.space-case{
 	$sc-green: #d3ff26;
 	$sc-forest: #4be18b;
 	$newsprint: #fff8dd;
+
+	background-color: $sc-navy;
+	background-image: url('../media/images/stars.png');
+	font-family: $font1;
 
 	@mixin spacetrail($length,$color1: yellow, $color2: red, $text: false, $outline: true, $outline-color: white){
 		$tempString: "-1px 1px #{$color1}";
@@ -747,7 +748,7 @@ body.space-case{
 	.container{
 		max-width: $tablet-breakpoint;
 		margin: 0 auto;
-		padding: 1em;
+		padding: 1em 1em 3em 1em;
 		overflow: visible;
 	}
 
@@ -764,7 +765,7 @@ body.space-case{
 
 		&::before {
 			display: block;
-			position: fixed;
+			position: absolute;
 			top: 0.5em;
 			left: 50vw;
 			width: 50vw;
@@ -895,7 +896,7 @@ body.space-case{
 			font-size: 4.25em;
 
 			&:before{
-				
+				position: fixed;
 			}
 		}
 

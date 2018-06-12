@@ -399,6 +399,7 @@ body.spartan {
         display: none; } }
 
 body.space-case {
+  background-color: #010548;
   background-image: url("../media/images/stars.png");
   font-family: "Quicksand", "sans-serif"; }
   body.space-case h2 a:hover, body.space-case label#theme-menu a:hover, body.space-case label#theme-menu li#space-case a {
@@ -412,7 +413,7 @@ body.space-case {
   body.space-case .container {
     max-width: 35em;
     margin: 0 auto;
-    padding: 1em;
+    padding: 1em 1em 3em 1em;
     overflow: visible; }
   body.space-case h1, body.space-case h2 {
     margin: 0; }
@@ -424,7 +425,7 @@ body.space-case {
     text-shadow: 0 1px white, 0 -1px white,-1px 1px #00ffff, -2px 2px #00e6ea, -3px 3px #00d9e0, -4px 4px #00cdd6, -5px 5px #00c0cb, -6px 6px #00b4c1, -7px 7px #00a7b7, -8px 8px #019bac, -9px 9px #018ea2, -10px 10px #018298, -11px 11px #01758d, -12px 12px #016983, -13px 13px #015c79, -14px 14px #01506e, -15px 15px #014364; }
     body.space-case h1::before {
       display: block;
-      position: fixed;
+      position: absolute;
       top: 0.5em;
       left: 50vw;
       width: 50vw;
@@ -500,6 +501,8 @@ body.space-case {
   @media (min-width: 35em) {
     body.space-case h1 {
       font-size: 4.25em; }
+      body.space-case h1:before {
+        position: fixed; }
     body.space-case h2 a {
       display: inline-block; } }
   @media (min-width: 55em) {
