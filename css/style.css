@@ -19,6 +19,8 @@ body.sweet {
     background-color: #b4ffe4; }
     body.sweet label#theme-menu a:hover, body.sweet .content a:hover[href], body.sweet label#theme-menu a:focus, body.sweet .content a:focus[href], body.sweet label#theme-menu a:active, body.sweet .content a:active[href] {
       background-color: yellow; }
+  body.sweet .container {
+    padding-bottom: 3em; }
   body.sweet header {
     overflow: auto;
     padding: 2em 0;
@@ -36,17 +38,18 @@ body.sweet {
         body.sweet header h2 a:hover {
           color: black; }
   body.sweet label#theme-menu {
-    display: flex;
+    display: block;
     margin: 0.5em auto;
-    width: max-content;
     text-align: center; }
     body.sweet label#theme-menu ul {
       display: flex;
-      padding: 0;
+      flex-wrap: wrap;
       margin: 0;
+      padding: 0;
+      justify-content: center;
       list-style: none; }
     body.sweet label#theme-menu li {
-      margin: 0 0.5em;
+      margin: 0.25em;
       padding: 0; }
       body.sweet label#theme-menu li#sweet a {
         background-color: yellow; }
@@ -55,16 +58,16 @@ body.sweet {
         line-height: 1;
         margin-left: 0.25em; }
   body.sweet .content figure {
-    max-width: max-content;
+    width: 15em;
     margin: 1em auto;
     background-color: #ff7908;
     background-image: url("../media/images/selfie.jpg");
-    background-size: cover;
+    background-size: 100%;
     background-blend-mode: overlay; }
     body.sweet .content figure img {
       display: block;
       opacity: 0.5;
-      max-width: 15em; }
+      width: 15em; }
     body.sweet .content figure figcaption {
       display: none; }
   body.sweet .content h3 {
@@ -103,15 +106,17 @@ body.sweet {
       display: inline-block; }
       body.sweet header h2 a:first-of-type::after {
         content: "\1F366";
-        padding: 0 0.25em; } }
-  @media (min-width: 55em) {
+        padding: 0 0.25em; }
     body.sweet label#theme-menu {
       position: absolute;
-      right: calc(50vw + 19em);
-      flex-direction: column;
-      margin-top: 1em; }
+      left: calc(50vw - 17em);
+      top: 10em; }
       body.sweet label#theme-menu ul {
-        flex-direction: column; }
+        flex-direction: column; } }
+  @media (min-width: 55em) {
+    body.sweet label#theme-menu {
+      left: calc(50vw - 26em);
+      margin-top: 1em; }
       body.sweet label#theme-menu li {
         margin: 0.25em; }
     body.sweet .content {
@@ -122,6 +127,7 @@ body.sweet {
         z-index: -1; } }
 
 body.vapor {
+  overflow: auto;
   background-color: #9be7fb;
   background-image: url("../media/images/clouds.gif");
   background-repeat: no-repeat no-repeat;
@@ -194,12 +200,14 @@ body.vapor {
       font-size: 0.8em; }
     body.vapor label#theme-menu ul {
       display: flex;
+      flex-wrap: wrap;
       margin: 0;
       padding: 0;
       justify-content: center;
       list-style: none; }
     body.vapor label#theme-menu li {
       padding: 0 0.25em;
+      margin: 0.1em 0;
       line-height: 1em; }
       body.vapor label#theme-menu li#vapor a {
         background-color: blue; }
@@ -212,12 +220,13 @@ body.vapor {
   body.vapor .content figure {
     margin: 2em auto;
     width: 15em;
-    height: 15em; }
+    height: 15em;
+    background-image: url("../media/images/selfie.jpg");
+    background-size: 100%;
+    background-position: 0 -1.5em;
+    filter: grayscale(100%); }
     body.vapor .content figure img {
-      width: 100%;
-      margin-top: -2.5em;
-      filter: grayscale(100%);
-      clip-path: circle(42%); }
+      display: none; }
     body.vapor .content figure figcaption {
       display: none; }
   body.vapor .content h3 {

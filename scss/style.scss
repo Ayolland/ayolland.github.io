@@ -49,6 +49,10 @@ body.sweet{
 	    }
 	}
 
+	.container{
+		padding-bottom: 3em;
+	}
+
 	header{
 		overflow: auto;
 		padding: 2em 0;
@@ -76,20 +80,21 @@ body.sweet{
 	}
 
 	label#theme-menu {
-	    display: flex;
+	    display: block;
 	    margin: 0.5em auto;
-	    width: max-content;
 	    text-align: center;
 
 	    ul {
 		    display: flex;
-		    padding: 0;
-		    margin: 0;
-		    list-style: none;
+			flex-wrap: wrap;
+			margin: 0;
+			padding: 0;
+			justify-content: center;
+			list-style: none;
 		}
 
 		li {
-		    margin: 0 0.5em;
+		    margin: 0.25em;
 		    padding: 0;
 
 		    &#sweet{
@@ -116,17 +121,17 @@ body.sweet{
 
 		figure{
 			@extend %pop-box;
-			max-width: max-content;
+			width: 15em;
 			margin: 1em auto;
 			background-color: $accent-orange;
 			background-image: url('../media/images/selfie.jpg');
-			background-size: cover;
+			background-size: 100%;
 			background-blend-mode: overlay;
 
 			img{
 				display: block;
 				opacity: 0.5;
-				max-width: 15em;
+				width: 15em;
 			}
 
 			figcaption{
@@ -199,18 +204,26 @@ body.sweet{
 				}
 			}
 		}
+
+		label#theme-menu{
+			position: absolute;
+    		left: calc(50vw - 17em);
+    		top: 10em;
+
+    		ul{
+    			flex-direction: column;
+    		}
+		}
 	}
 
 	@media (min-width: $desktop-breakpoint) {
 
 		label#theme-menu {
-			position: absolute;
-    		right: calc(50vw + 19em);
-    		flex-direction: column;
+    		left: calc(50vw - 26em);
     		margin-top: 1em;
 
 			ul{
-				flex-direction: column;
+				
 			}
 
 			li{
@@ -236,6 +249,7 @@ body.vapor{
 	$blue-gel: fade-out(#0000ff,0.8);
 	$purple-shadow: fade-out(#520090,0.5);
 
+	overflow: auto;
 	background-color: $bg-blue;
 	background-image: url('../media/images/clouds.gif');
 	background-repeat: no-repeat no-repeat;
@@ -343,6 +357,7 @@ body.vapor{
 
 		ul{
 			display: flex;
+			flex-wrap: wrap;
 			margin: 0;
 			padding: 0;
 			justify-content: center;
@@ -351,6 +366,7 @@ body.vapor{
 
 		li{
 			padding: 0 0.25em;
+			margin: 0.1em 0;
 			line-height: 1em;
 
 			&#vapor a{
@@ -375,14 +391,15 @@ body.vapor{
 			margin: 2em auto;
 			width: 15em;
 			height: 15em;
+			background-image: url('../media/images/selfie.jpg');
+			background-size: 100%;
+			background-position: 0 -1.5em;
+			filter: grayscale(100%);
 		   
 			@extend %triple-circle;
 
 		    img{
-		    	width: 100%;
-    			margin-top: -2.5em;
-    			filter: grayscale(100%);
-    			clip-path: circle(42%);
+		    	display: none;
 		    }
 
 		    figcaption{
