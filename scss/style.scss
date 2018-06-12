@@ -156,17 +156,20 @@ body.sweet{
 		}
 
 		li{
-			list-style: none;
+			position: relative;
     		padding: 0 0 0 0.5em;
     		line-height: 1;
-    		margin-bottom: 0.25em;
+    		margin: 0.75em 0;
+    		list-style: none;
 
 			&:before {
-				display: inline-block;
+				position: absolute;
+				top: 0;
+				left: 0;
 				content: "\1F36C";
 				font-size: 1.5em;
 				vertical-align: middle;
-				margin: 0 0.25em 0 -1.75em;
+				margin: -0.25em 0.25em 0 -1.25em;
 			}
 		}
 
@@ -570,6 +573,7 @@ body.spartan{
 
 		ul{
 			display: flex;
+			flex-wrap: wrap;
 			margin: 0;
 			padding: 0;
 			list-style: none;
@@ -610,12 +614,17 @@ body.spartan{
 			padding-left: 1em;
 
 			li{
+				position: relative;
 				margin: 0.25em 0;
 
 				&:before {
 					content: "-";
-					display: inline-block;
-					margin: 0 0.5em;
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					margin: 0 0 0 -0.75em;
+					padding-right: 0.75em;
 					color: $plum;
 				}
 			}
@@ -694,9 +703,19 @@ body.spartan{
 
 body.space-case{
 
+	background-image: url('../media/images/stars.png');
 	font-family: $font1;
 
-	@mixin spacetrail($length,$color1: yellow, $color2: red, $text: false){
+	$sc-yellow: yellow;
+	$sc-red: red;
+	$sc-purple: purple;
+	$sc-navy: #010548;
+	$sc-blue: mix(blue,$sc-navy);
+	$sc-green: #d3ff26;
+	$sc-forest: #4be18b;
+	$newsprint: #fff8dd;
+
+	@mixin spacetrail($length,$color1: yellow, $color2: red, $text: false, $outline: true, $outline-color: white){
 		$tempString: "-1px 1px #{$color1}";
 		@for $i from 2 through $length {
 			$ratio: 100% - ($i / $length * 100%);
@@ -704,21 +723,25 @@ body.space-case{
 			$tempString: $tempString + ", -#{$i}px #{$i}px #{$tempcolor}";
 		}
 		@if ($text){
+			@if ($outline){
+				$tempString: "0 1px #{$outline-color}, 0 -1px #{$outline-color}," + $tempString;
+			}
 			text-shadow: unquote($tempString);
 		} @else {
 			box-shadow: unquote($tempString);
 		}
 	}
 
-	%space-text{
-		
+	%super-hover{
+		@include spacetrail(15, $sc-forest, mix($sc-navy,teal), true, false);
 	}
 
 	%space-box{
 		padding: 0.5em;
-		background-color: white;
+		background-color: $newsprint;
 		border: 2px solid orange;
 		border-radius: 0.25em;
+		color: maroon;
 	}
 
 	.container{
@@ -728,8 +751,85 @@ body.space-case{
 		overflow: visible;
 	}
 
-	h1,h2,h3{
-		@include spacetrail(20, white, blue, true);
+	h1,h2{
+		margin: 0;
+	}
+
+	h1{
+		padding-top: 2.75em;
+		font-size: 12vw;
+		text-align:	center; 
+		color: #ffb400;
+		@include spacetrail(15, #00ffff, mix($sc-navy,teal), true);
+
+		&::before {
+			display: block;
+			position: fixed;
+			top: 0.5em;
+			left: 50vw;
+			width: 50vw;
+			height: calc(1.26 * 50vw);
+			max-height: 250px;
+			max-width: 200px;
+			background-image: url('../media/images/rocket.png');
+			background-repeat: no-repeat;
+			background-size: 100%;
+			content: "";
+			transform: translateX(-50%);
+			z-index: -1;
+		}
+	}
+
+	h2{
+		text-align: center;
+		a{
+			display: block;
+			margin: 0 0.5em;
+			color: white;
+			text-decoration: none;
+			@include spacetrail(15, #308bd7, $sc-navy, true, false);
+
+			&:hover{
+				@extend %super-hover;
+			}
+		}
+	}
+
+	h3{
+		color: $sc-blue;
+		@include spacetrail(15, #00ffff, teal, true);
+	}
+	
+	label#theme-menu {
+		display: block;
+		text-align: center;
+		color: white;
+		font-weight: 700;
+		margin-top: 1em;
+
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+
+		a {
+			margin: 0 1em;
+			color: white;
+			text-decoration: none;
+			font-weight: 700;
+
+			&:hover{
+				@extend %super-hover;
+			}
+		}
+
+		li#space-case a{
+			@extend %super-hover;
+		}
 	}
 
 	figure{
@@ -739,18 +839,80 @@ body.space-case{
 	.content{
 		p{
 			@extend %space-box;
-			@include spacetrail(500, yellow, red, false);
+			@include spacetrail(500, $sc-yellow, $sc-red, false);
 
 			&+p{
-				@include spacetrail(400, mix(yellow,red,85%), mix(red,purple,80%), false);
+				@include spacetrail(550, mix($sc-yellow,$sc-red,85%), mix($sc-red,$sc-purple,80%), false);
 
 				&+p{
-					@include spacetrail(500, mix(yellow,red,70%), mix(red,purple,60%), false);
+					@include spacetrail(400, mix($sc-yellow,$sc-red,70%), mix($sc-red,$sc-purple,60%), false);
 
 					&+p{
-						@include spacetrail(500, mix(yellow,red,65%), mix(red,purple,40%), false);
+						@include spacetrail(350, mix($sc-yellow,$sc-red,50%), mix($sc-red,$sc-purple,40%), false);
 					}
 				}
+			}
+		}
+
+		hr{
+			display: none;
+		}
+
+		a[href]{
+			font-weight: 700;
+			color: purple;
+			text-decoration: none;
+
+			&:hover,&:focus,&:active{
+				color: $sc-blue;
+			}
+		}
+
+		ul{
+			@extend %space-box;
+			padding-left: 2em;
+			border-color: $sc-forest;
+			list-style: none;
+			@include spacetrail(450, $sc-green, teal, false);
+
+			li{
+				background-image: url(../media/images/ringed-planet.svg);
+				background-size: 1.25em;
+				background-repeat: no-repeat;
+				margin: 0.5em 0 0.5em -1em;
+				padding-left: 2em;
+
+				&:nth-of-type(2n){
+					background-image: url(../media/images/moon-orbit.svg);
+				}
+			}
+		}
+	}
+
+	@media (min-width: $tablet-breakpoint) {
+
+		h1{
+			font-size: 4.25em;
+
+			&:before{
+				
+			}
+		}
+
+		h2{
+			a{
+				display: inline-block;
+			}
+		}
+	}
+
+	@media (min-width: $desktop-breakpoint) {
+		h1{
+			padding-top: 0;
+
+			&:before{
+				left: calc(50vw + 3.25em);
+    			transform: none;
 			}
 		}
 	}

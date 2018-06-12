@@ -46,6 +46,22 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/media\/images\/asteroid.gif": {
+		"ft": 4194304,
+		"iS": 43659,
+		"oA": 0,
+		"oAP": "\/media\/images\/asteroid.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/media\/images\/asteroide.gif": {
+		"ft": 4194304,
+		"iS": 5635,
+		"oA": 0,
+		"oAP": "\/media\/images\/asteroide.gif",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/media\/images\/clouds.gif": {
 		"ft": 4194304,
 		"iS": 472500,
@@ -70,6 +86,16 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/media\/images\/moon-orbit.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/media\/images\/moon-orbit.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/media\/images\/pattern.png": {
 		"ft": 32768,
 		"iS": 5530,
@@ -78,6 +104,38 @@
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/media\/images\/ringed-planet.png": {
+		"ft": 32768,
+		"iS": 871,
+		"oA": 0,
+		"oAP": "\/media\/images\/ringed-planet.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/media\/images\/ringed-planet.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/media\/images\/ringed-planet.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/media\/images\/rocket.png": {
+		"ft": 32768,
+		"iS": 49199,
+		"oA": 0,
+		"oAP": "\/media\/images\/rocket.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -97,6 +155,17 @@
 		"iS": 5624,
 		"oA": 0,
 		"oAP": "\/media\/images\/sprinkles.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/media\/images\/stars.png": {
+		"ft": 32768,
+		"iS": 40359,
+		"oA": 0,
+		"oAP": "\/media\/images\/stars.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,

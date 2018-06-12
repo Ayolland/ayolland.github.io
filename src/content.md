@@ -11,7 +11,7 @@ I make web sites, web-based tools, and web-based games. I'm passionate about cre
 
 ### Contact and Social Media Links
 
-* [Email Me at andrew.yolland@gmail.com](mailto:andrew.yolland@gmail.com)
+* [Email](mailto:andrew.yolland@gmail.com)
 * [Current Resumé](media/pdf/resume_5-2018.pdf)
 * [Twitter](https://twitter.com/AYolland)
 * [Github](https://github.com/Ayolland)
@@ -19,14 +19,14 @@ I make web sites, web-based tools, and web-based games. I'm passionate about cre
 
 ***
 
-### <a name="web">Web work done through Corporate 3 Design</a>
+### <a name="web">Web Work through Corporate 3 Design</a>
 
 I currently work as a full-stack web developer at C3D, working with designers to bring clients' visions to life, with an emphasis on responsive design.
 
-* [Methodist Hospital 2016 Meaning of Care Brand Site](http://bestcare.org/tmoc2016/)
+* [Methodist Heath System 2016 Brand Site](http://bestcare.org/tmoc2016/)
 * [Omaha Eppley Airfield Website](https://www.flyoma.com)
 * [5C Laboratories site](http://5clabs.com/)
-* [Methodist Hospital 2018 Meaning of Care Brand Site](https://www.bestcare.org/content/tmoc-spring-2018/)
+* [Methodist Heath System 2018 Brand Site](https://www.bestcare.org/content/tmoc-spring-2018/)
 
 ***
 
