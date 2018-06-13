@@ -21,7 +21,7 @@ I make web sites, web-based tools, and web-based games. I'm passionate about cre
 
 ### <a name="web">Web Work through Corporate 3 Design</a>
 
-I currently work as a full-stack web developer at C3D, working with designers to bring clients' visions to life, with an emphasis on responsive design.
+I work as a full-stack web developer at C3D, working with designers to bring clients' visions to life, with an emphasis on responsive design.
 
 * [Methodist Heath System 2016 Brand Site](http://bestcare.org/tmoc2016/)
 * [Omaha Eppley Airfield Website](https://www.flyoma.com)
