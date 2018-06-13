@@ -78,6 +78,25 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/media\/images\/favicon.png": {
+		"ft": 32768,
+		"iS": 150,
+		"oA": 0,
+		"oAP": "\/media\/images\/favicon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/media\/images\/gem.gif": {
+		"ft": 4194304,
+		"iS": 49538,
+		"oA": 0,
+		"oAP": "\/media\/images\/gem.gif",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/media\/images\/gemblue.gif": {
 		"ft": 4194304,
 		"iS": 324,

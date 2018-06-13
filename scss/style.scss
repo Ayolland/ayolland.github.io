@@ -258,7 +258,6 @@ body.vapor{
 	background-repeat: no-repeat no-repeat;
 	background-position: top center;
 	background-size: 100%;
-	background-attachment: fixed;
 	font-family: sans-serif;
 	font-weight: 300;
 	line-height: 1.5;
@@ -388,16 +387,31 @@ body.vapor{
 		}
 	}
 
+	@keyframes orbitX {
+		0%   {transform: translateX( 0 ); z-index: 5;}
+		50%  {transform: translateX( 22em ); z-index: 5;}
+		51%  {transform: translateX( 22em ); z-index: -1;}
+		100%  {transform: translateX( 0 ); z-index: -1;}
+	}
+
+	@keyframes orbitY {
+		0%  {top: 65%;}
+		50%  {top: 15%;}
+		100%  {top: 65%;}
+	}
+
 	.content{
 
 		figure {
 			margin: 2em auto;
 			width: 15em;
 			height: 15em;
+			background-color: gray;
 			background-image: url('../media/images/selfie.jpg');
 			background-size: 100%;
 			background-position: 0 -1.5em;
-			filter: grayscale(100%);
+			background-blend-mode: luminosity;
+			//filter: grayscale(100%);
 		   
 			@extend %triple-circle;
 
@@ -406,7 +420,19 @@ body.vapor{
 		    }
 
 		    figcaption{
-		    	display: none;
+		    	display: block;
+		    	width: 3em;
+				height: 3em;
+		    	position: absolute;
+				left: calc(50% - 12.5em);
+				text-indent: 1000vw;
+				white-space: nowrap;
+				display: block;
+				background-size: 100%;
+				background-image: url(../media/images/gem.gif);
+				background-repeat: no-repeat;
+				animation: orbitX 5s ease-in-out infinite, orbitY 5s ease-in-out infinite;
+
 		    }
 		}
 
@@ -468,6 +494,8 @@ body.vapor{
 
 	@media (min-width: $tablet-breakpoint) {
 
+		background-attachment: fixed;
+		
 		header{
 			h1{
 				font-size: 3em;
