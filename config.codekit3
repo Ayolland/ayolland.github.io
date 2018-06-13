@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "26680",
 "files": {
+	"\/CNAME": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/CNAME",
+		"oF": 0
+		},
 	"\/css\/style.css": {
 		"aP": 1,
 		"bl": 0,
@@ -212,6 +219,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/media\/pdf\/resume_5-2018.pdf",
+		"oF": 0
+		},
+	"\/media\/pdf\/resume_6-2018.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/media\/pdf\/resume_6-2018.pdf",
 		"oF": 0
 		},
 	"\/README.md": {
