@@ -58,6 +58,10 @@ body.sweet{
 		padding-bottom: 3em;
 	}
 
+	*::selection{
+		background: yellow;
+	}
+
 	header{
 		overflow: auto;
 		padding: 2em 0;
@@ -266,6 +270,11 @@ body.vapor{
 	font-family: sans-serif;
 	font-weight: 300;
 	line-height: 1.5;
+
+	*::selection {
+		background: blue;
+		color: white;
+	}
 
 	%ghost-box{
 		background-color: fade-out($bg-blue,0.5);
@@ -533,6 +542,10 @@ body.spartan{
 	font-family: 'Helvetica', sans-serif;
 	background-image: url('../media/images/composition2.gif');
 
+	*::selection {
+	background: #C6C6C6;
+	}
+
 	$plum: #9c18be;
 
 	%animated-link{
@@ -751,6 +764,10 @@ body.space-case{
 	background-color: $sc-navy;
 	background-image: url('../media/images/stars.png');
 	font-family: $font1;
+
+	*::selection {
+		background: orange;
+	}
 
 	@mixin spacetrail($length,$color1: yellow, $color2: red, $text: false, $outline: true, $outline-color: white){
 		$tempString: "-1px 1px #{$color1}";

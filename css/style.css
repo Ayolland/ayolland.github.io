@@ -26,6 +26,8 @@ body.sweet {
       background-color: yellow; }
   body.sweet .container {
     padding-bottom: 3em; }
+  body.sweet *::selection {
+    background: yellow; }
   body.sweet header {
     overflow: auto;
     padding: 2em 0;
@@ -144,6 +146,9 @@ body.vapor {
   font-family: sans-serif;
   font-weight: 300;
   line-height: 1.5; }
+  body.vapor *::selection {
+    background: blue;
+    color: white; }
   body.vapor header, body.vapor .content h3, body.vapor .content p, body.vapor .content ul {
     background-color: rgba(155, 231, 251, 0.5); }
   body.vapor .content figure, body.vapor .content hr {
@@ -325,6 +330,8 @@ body.vapor {
 body.spartan {
   font-family: 'Helvetica', sans-serif;
   background-image: url("../media/images/composition2.gif"); }
+  body.spartan *::selection {
+    background: #C6C6C6; }
   body.spartan header h2 a, body.spartan label#theme-menu a, body.spartan .content a[href] {
     display: inline-block;
     text-decoration: none;
@@ -445,6 +452,8 @@ body.space-case {
   background-color: #010548;
   background-image: url("../media/images/stars.png");
   font-family: "Quicksand", "sans-serif"; }
+  body.space-case *::selection {
+    background: orange; }
   body.space-case h2 a:hover, body.space-case label#theme-menu a:hover, body.space-case label#theme-menu li#space-case a {
     text-shadow: -1px 1px #4be18b, -2px 2px #41cc86, -3px 3px #3cc183, -4px 4px #37b781, -5px 5px #32ac7e, -6px 6px #2da27b, -7px 7px #289779, -8px 8px #248d76, -9px 9px #1f8274, -10px 10px #1a7871, -11px 11px #156d6e, -12px 12px #10636c, -13px 13px #0b5869, -14px 14px #064e67, -15px 15px #014364; }
   body.space-case .content p, body.space-case .content ul {
