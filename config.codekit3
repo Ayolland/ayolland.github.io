@@ -70,6 +70,22 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/media\/images\/composition.gif": {
+		"ft": 4194304,
+		"iS": 55107,
+		"oA": 0,
+		"oAP": "\/media\/images\/composition.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/media\/images\/composition2.gif": {
+		"ft": 4194304,
+		"iS": 118287,
+		"oA": 0,
+		"oAP": "\/media\/images\/composition2.gif",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/media\/images\/dolphin.gif": {
 		"ft": 4194304,
 		"iS": 363109,
@@ -206,9 +222,9 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/README.html",
-		"oF": 0,
+		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
 		"pHT": 0,

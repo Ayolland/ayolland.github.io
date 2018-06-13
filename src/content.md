@@ -12,7 +12,7 @@ I make web sites, web-based tools, and web-based games. I'm passionate about cre
 ### Contact and Social Media Links
 
 * [Email](mailto:andrew.yolland@gmail.com)
-* [Current Resumé](media/pdf/resume_5-2018.pdf)
+* [Resumé](media/pdf/resume_5-2018.pdf)
 * [Twitter](https://twitter.com/AYolland)
 * [Github](https://github.com/Ayolland)
 * [Itch.io](https://ayolland.itch.io/)
