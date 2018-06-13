@@ -4,7 +4,12 @@ body {
 
 body.sweet {
   font-family: "Quicksand", "sans-serif";
-  background-image: url("../media/images/pattern.png"), linear-gradient(to bottom, #ffeb00 0%, #ffffcd 100%); }
+  background-image: url("../media/images/pattern.png"), linear-gradient(to bottom, #ffeb00 0%, #ffffcd 100%);
+  animation: shift-it 25s linear infinite; }
+
+@keyframes shift-it {
+  to {
+    background-position: -100%, -100%; } }
   body.sweet .content {
     max-width: 35em;
     margin: 0 auto;
@@ -318,7 +323,8 @@ body.vapor {
             -webkit-text-fill-color: white; } }
 
 body.spartan {
-  font-family: 'Helvetica', sans-serif; }
+  font-family: 'Helvetica', sans-serif;
+  background-image: url("../media/images/composition2.gif"); }
   body.spartan header h2 a, body.spartan label#theme-menu a, body.spartan .content a[href] {
     display: inline-block;
     text-decoration: none;
@@ -345,9 +351,11 @@ body.spartan {
       color: #9c18be; }
   body.spartan .container {
     max-width: 35em;
-    margin: 0 auto;
+    margin: 0.5em auto;
     padding: 1em 1em 4em 1em;
-    overflow: auto; }
+    overflow: auto;
+    background: white;
+    width: calc(100vw - 3em); }
   body.spartan header h1 {
     font-size: 3.5em;
     width: 1px;

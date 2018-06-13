@@ -21,12 +21,17 @@ body.sweet{
 	$shadow: fade-out($accent-orange,0.5);
 	$accent-teal: #b4ffe4;
 
+	@keyframes shift-it{
+		to{ background-position: -100%, -100%; }
+	}
+
 	font-family: $font1;
 	//background-color: $bg-yellow;
 	background-image:
 		url('../media/images/pattern.png'),
 		linear-gradient(to bottom, $bg-yellow 0%, mix(#ffff9b,white) 100%)
 		;
+		animation: shift-it 25s linear infinite;
 
 	%column{
 		max-width: $tablet-breakpoint;
@@ -495,7 +500,7 @@ body.vapor{
 	@media (min-width: $tablet-breakpoint) {
 
 		background-attachment: fixed;
-		
+
 		header{
 			h1{
 				font-size: 3em;
@@ -526,6 +531,7 @@ body.vapor{
 
 body.spartan{
 	font-family: 'Helvetica', sans-serif;
+	background-image: url('../media/images/composition2.gif');
 
 	$plum: #9c18be;
 
@@ -567,9 +573,11 @@ body.spartan{
 
 	.container{
 		max-width: $tablet-breakpoint;
-		margin: 0 auto;
+		margin: 0.5em auto;
 		padding: 1em 1em 4em 1em;
 		overflow: auto;
+		background: white;
+		width: calc(100vw - 3em);
 	}
 
 	header{
