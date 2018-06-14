@@ -38,7 +38,7 @@ Currently, I work mostly in [Bitsy](https://ledoux.itch.io/bitsy), a JavaScript-
 
 [I develop Borksy](https://ayolland.github.io/borksy/), a tool for extending the functionality of Bitsy. The goal of Borksy is to make extending Bitsy as accessible to newcomers as possible, even if users do not have any background in JavaScript, as well as provide easy-to-use, robust tools for experienced creators.
 
-I also volunteer with _Mystery Code Society_, a local non-profit working in tech education for middle-school age femmes and non-men. I have helped with curriculum development, development of tools for use in class, as well as a teaching assisant in game dev classes.
+I also volunteer with _Mystery Code Society_, a local non-profit working in tech education for middle-school age fems and non-men. I have helped with curriculum development, development of tools for use in class, as well as a teaching assisant in game dev classes.
 
 ***
 
